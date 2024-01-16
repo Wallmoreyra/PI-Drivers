@@ -6,5 +6,6 @@ const PORT = 3001;
 conn.sync({ force: true }).then(() => {
 server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
+  console.log('PI Driver X_x')
 })
 }).catch(error => console.error(error))
