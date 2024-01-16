@@ -1,0 +1,18 @@
+Solicitud de correccion:
+https://docs.google.com/forms/d/e/1FAIpQLSeVgteQf5L_wfXEhAFcOIOfhHC760UBL5dAWb7kbTTUxiLlHg/viewform
+
+
+---------Back-End----------------------
+comandos para librerias:
+npm i -y
+
+npm i express
+npm i axios
+npm i nodemon
+npm i morgan
+npm i sequelize
+npm i pg pg-hstore
+npm i dotenv
+
+agregar en package.json en la parte de Debug
+"start": "nodemon index.js"
