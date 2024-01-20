@@ -16,3 +16,14 @@ npm i dotenv
 
 agregar en package.json en la parte de Debug
 "start": "nodemon index.js"
+
+Ends Points del servidor:
+
+// trae todos los corredores:
+GET http://localhost:5000/drivers
+
+// trae corredores por el nombre:
+GET http://localhost:5000/drivers?name.forename={name}
+
+// trae corredor por el id:
+GET http://localhost:5000/drivers/:{id}
