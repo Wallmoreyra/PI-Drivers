@@ -1,7 +1,7 @@
 import { GET_DRIVERS } from "../actions"
 
 
-let initialState = {allDrivers:[]}
+let initialState = {allDrivers:[], post: []}
 
 function rootReducer(state = initialState, action){
     switch(action.type){

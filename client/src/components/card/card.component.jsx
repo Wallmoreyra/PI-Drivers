@@ -1,6 +1,8 @@
 import './card.styles.css'
 
-function Card() {
+function Card({driver}) {
+    console.log(driver)
+
     return (
         <div className='card-container'>
             
