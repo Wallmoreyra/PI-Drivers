@@ -1,0 +1,29 @@
+.detail-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 16px;
+    align-items: center;
+  }
+  
+  .detail-image {
+    grid-column: span 5;
+  }
+  
+  .detail-info {
+    grid-column: span 7;
+  }
+  
+  .detail-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .detail-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .detail-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }

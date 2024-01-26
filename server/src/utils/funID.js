@@ -64,7 +64,7 @@ const infoCleanerAPI = (info) => {
     const imagenDriver = (imgDriver === '' || imgDriver === null) ? imgDefault : imgDriver ;
     //Caso que no tengan team les vamos a poner uno por default
     const teamsDefault = ['No Tiene', 'Equipo'];
-    const teamsDriver = info.teams.split(',')
+    const teamsDriver = info.teams.split(/,\s*/)
     const driverTeams = (teamsDriver.length >= 1) ? teamsDriver : teamsDefault;
 
     return {

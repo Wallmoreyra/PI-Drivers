@@ -8,7 +8,7 @@ function Cards({allDrivers}) {
     return (
         <div className='card-list'>
             {driverList?.map(driver => 
-                <Card driver = {driver}/>)}
+                <Card key={driver.id} driver = {driver}/>)}
 
             
             {/* <Card />
