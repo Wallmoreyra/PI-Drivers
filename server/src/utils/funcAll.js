@@ -57,7 +57,7 @@ const infoCleaner = async (arr) => {
             surname:driver.name.surname,
             image:imagenDriver,
             birthdate:driver.dob,
-            team:drivTeam,
+            teams:drivTeam,
             created:false
         }
     })

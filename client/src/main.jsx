@@ -18,12 +18,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <App /> */}
     <BrowserRouter>
       <Provider store={store}>
-      <>
-        <Route exact path='/' component={Landing}/>
-        <Route exact path='/home' component={Home}/>
-        <Route path='/home/:id' component={Detail}/>
-        <Route path='/create' component={Create}/>
-      </>
+        <>
+          <Route exact path='/' component={Landing}/>
+          <Route exact path='/home' component={Home}/>
+          <Route path='/home/:id' component={Detail}/>
+          <Route path='/create' component={Create}/>
+        </>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

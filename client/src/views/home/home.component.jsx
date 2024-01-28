@@ -54,8 +54,7 @@ function Home() {
 
     return (
         <div className='home'>
-            <h1 className='home-title'>Home page</h1>
-            <Navbar/>
+            <Navbar/>      
             <Searchbar handleChange={handleChange} handleSubmit={handleSubmit}/>
             <Cards  allDrivers = {allDrivers}/>
         </div>
