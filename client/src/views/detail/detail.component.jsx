@@ -2,9 +2,10 @@ import './detail.styles.css'
 
 
 import { useEffect } from 'react';
-import { getById } from '../../redux/actions';
+import { getById } from '../../redux/actions/actions';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import Navbar from '../../components/navbar/navbar.component';
 
 function Detail() {
     const { id } = useParams();
@@ -23,7 +24,12 @@ function Detail() {
     driverTeams = (driverTeams.length > 1) ? driverTeams.join(', ') : driverTeams;
 
     return (
-        <div className='detail-container'>
+        <>
+            <div>
+                <Navbar/>
+            </div>
+            <div className='detail-container'>
+            
             <div className='detail-image'>
                 <img src={driver.image} alt={`${driver.name} ${driver.surname}`}></img>
             </div>
@@ -37,7 +43,9 @@ function Detail() {
                 <p className='detail-text'>Escuderias: {`${driverTeams}.`}</p>
             </div>
             
-        </div>
+            </div>
+        </>
+        
     );
 }
 

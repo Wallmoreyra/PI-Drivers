@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getByName, getDrivers } from '../../redux/actions';
+import { getByName, getDrivers } from '../../redux/actions/actions';
 
 import Navbar from '../../components/navbar/navbar.component';
+import Searchbar from '../../components/serchBar/searchbar.component';
 import Cards from '../../components/cards/cards.component';
 
 import './home.styles.css'
@@ -54,7 +55,8 @@ function Home() {
     return (
         <div className='home'>
             <h1 className='home-title'>Home page</h1>
-            <Navbar handleChange={handleChange} handleSubmit={handleSubmit}/>
+            <Navbar/>
+            <Searchbar handleChange={handleChange} handleSubmit={handleSubmit}/>
             <Cards  allDrivers = {allDrivers}/>
         </div>
     );
