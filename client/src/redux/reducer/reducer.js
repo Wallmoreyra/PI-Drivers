@@ -1,10 +1,17 @@
-import { GET_DRIVERS, GET_BY_NAME, GET_BY_ID } from "../actions/actions"
+//import { GET_BY_NAME, GET_BY_ID } from "../actions/actions"
+import { GET_DRIVERS, GET_BY_NAME, GET_BY_ID, GET_TEAMS } from "../actions/action-types";
 
 
-let initialState = {allDrivers:[], driversCopy:[], post: [], driver: {}}
+let initialState = {allDrivers:[], allTeams:[], driversCopy:[], post: [], driver: {}}
 
 function rootReducer(state = initialState, action){
     switch(action.type){
+        case GET_TEAMS:
+        return{
+            ...state,
+            allTeams: action.payload,
+        };
+
         case GET_DRIVERS:
         return{
             ...state,

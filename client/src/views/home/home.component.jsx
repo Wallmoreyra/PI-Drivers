@@ -11,8 +11,15 @@ import './home.styles.css'
 
 function Home() {
     const dispatch = useDispatch();
-    const allDrivers = useSelector((state) => state.allDrivers);
+    const allDrivers = useSelector(state => state.allDrivers);
     const [searchString, setSearchString] = useState("");
+
+    useEffect(() => {
+        dispatch(getDrivers())
+        // return (() => {
+        //     cllearDetail()
+        // })
+    },[dispatch])
 
     function handleChange(e){
         e.preventDefault(); //sirve para que la pag no se re-renderice
@@ -45,17 +52,13 @@ function Home() {
     //     setFiltered(filtered);
     // }
 
-    useEffect(() => {
-        dispatch(getDrivers())
-        // return (() => {
-        //     cllearDetail()
-        // })
-    },[dispatch])
+    
 
     return (
         <div className='home'>
             <Navbar/>      
             <Searchbar handleChange={handleChange} handleSubmit={handleSubmit}/>
+            <button>Filtro por </button>
             <Cards  allDrivers = {allDrivers}/>
         </div>
     );
