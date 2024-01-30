@@ -12,7 +12,7 @@
     transition: transform 0.25s ease-out;
     color: black;
     text-decoration: none;
-    width: 25rem;
+    width: 20rem;
 }
 
 .card-container:hover {

@@ -2,7 +2,7 @@ import './detail.styles.css'
 
 
 import { useEffect } from 'react';
-import { getById } from '../../redux/actions/actions';
+import { cleanDetail, getById } from '../../redux/actions/actions';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../../components/navbar/navbar.component';
@@ -14,6 +14,7 @@ function Detail() {
 
     useEffect(() => {
         dispatch(getById(id));
+        return () => dispatch(cleanDetail());
     }, [dispatch, id]);
 
 

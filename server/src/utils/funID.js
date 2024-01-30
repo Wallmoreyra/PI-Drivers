@@ -32,6 +32,7 @@ const getDriverByID = async (id, detail) => {
             image:driv.image,
             birthdate:driv.birthdate,
             teams:teamsWhitDriver,
+            created: 'si',
     };
     //console.log(driv)
     //console.log(teamsWhitDriver)

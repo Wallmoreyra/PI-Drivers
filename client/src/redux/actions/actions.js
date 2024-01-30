@@ -91,3 +91,44 @@ export function postDriver(state){
         }
     }
 }
+
+export function page (order) {
+    return function(dispatch){
+        dispatch({
+            type:'PAGINATE',
+            payload:order
+        })
+    }
+}
+
+export function driversFilter (order) {
+    return function(dispatch){
+        dispatch({
+            type:'FILTER',
+            payload:order
+        })
+    }
+}
+
+export function driverByTeam (dataTeam) {
+    return function(dispatch){
+        dispatch({
+            type:'DRIVER_BY_TEAM',
+            payload:{dataTeam}
+        })
+    }
+}
+
+export function resetDrivers () {
+    return function(dispatch){
+        dispatch({
+            type:'RESET',
+        })
+    }
+}
+
+export const cleanDetail = () => {
+    return {
+        type: 'CLEAN_DETAIL',
+    }
+}
