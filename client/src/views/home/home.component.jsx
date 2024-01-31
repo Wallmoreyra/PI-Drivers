@@ -49,33 +49,50 @@ function Home() {
 
     return (
         <div className='home'>
-            <Navbar/>      
-            <Searchbar handleChange={handleChange} handleSubmit={handleSubmit}/>
-            <div>
-                <label>Busqueda por team</label>
-                <input name='teamInput' placeholder='Team'  type='search' />
-                <button type='submit' onClick={teamsSearch}>Buscar</button>
+            <Navbar/>
+            <div className='home-cont-opciones'>
+                <div className='home-cont-barras-busqueda'>
+                    <p>Busqueda</p>
+                    <Searchbar handleChange={handleChange} handleSubmit={handleSubmit}/>
+                    <div className='home-cont-barras-busq-team'>
+                        <label>Por Team:</label>
+                        <input name='teamInput' placeholder='Team'  type='search' />
+                        <button className='home-cont-barras-busq-team-botton' type='submit' onClick={teamsSearch}>Buscar</button>
+                    </div>
+                </div>      
+                <div className='home-cont-pag-reset'>
+                    <button className='home-cont-pag-boton-reset' onClick={reset}>Reset</button>
+                    <div className='home-cont-pag'>
+                        <button className='home-cont-pag-boton' name='prev' onClick={pagination}>Prev</button>
+                        <label>Paginado</label>
+                        <button className='home-cont-pag-boton' name='next' onClick={pagination}>Next</button>
+                    </div>
+                </div>
+                <div className='home-cont-filtros'>
+                    <div className='home-cont-filtros-alfa'>
+                        <label>Filtro Alfa </label>
+                        <button name='AZ' onClick={filters}>A-Z</button>
+                        <button name='ZA' onClick={filters}>Z-A</button>
+                    </div>
+                    <div className='home-cont-filtros-info'>
+                        <label>Filtro Info </label>
+                        <button name='API' onClick={filters}>API</button>
+                        <button name='DB' onClick={filters}>DB</button>
+                    </div>
+                    <div className='home-cont-filtros-fecha'>
+                        <label>Filtro fecha </label>
+                        <button name='DOBUP' onClick={filters}>DoB UP</button>
+                        <button name='DOBDOWN' onClick={filters}>DoB DOWN</button>
+                    </div>
+                </div>
             </div>
             <div>
-                <button onClick={reset}>Resetear las cards</button>
+                <div className='container-cards'>
+                    <Cards  allDrivers = {allDrivers}/>
+                </div>
             </div>
-            <div>
-                <label>Filtros</label>
-                <button name='AZ' onClick={filters}>A-Z</button>
-                <button name='ZA' onClick={filters}>Z-A</button>
-                <button name='API' onClick={filters}>API</button>
-                <button name='DB' onClick={filters}>DB</button>
-                <button name='DOBUP' onClick={filters}>DoB UP</button>
-                <button name='DOBDOWN' onClick={filters}>DoB DOWN</button>
-            </div>
-            <div>
-                <label>Paginado</label>
-                <button name='prev' onClick={pagination}>Prev</button>
-                <button name='next' onClick={pagination}>Next</button>
-            </div>
-            <div className='container-cards'>
-                <Cards  allDrivers = {allDrivers}/>
-            </div>
+            
+            
         </div>
     );
 }

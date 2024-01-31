@@ -6,9 +6,6 @@ import Form from '../../components/form/form.component';
 function Create() {
     return (
         <>
-            <div >
-                <p>Create page</p>
-            </div>
             <div>
                 <Navbar/>
             </div>

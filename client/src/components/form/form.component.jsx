@@ -75,7 +75,7 @@ function Form() {
     const botonSend = () => {
         let disabledAux = true;
         for(let error in errors){
-            if(errors[error] === '') disabledAux = false;
+            if(errors[error] === 'OK') disabledAux = false;
             else{
                 disabledAux = true;
                 break; //quitar en el momento de darle estilos al form
@@ -116,79 +116,92 @@ function Form() {
     ));
     
     return (
-        <div>
+        <div className='contenedor-formulario'>
             {/* {console.log(state)}
             {console.log(errors)} */}
             {/* {console.log(allTeams)} */}
-            <p>Aca va el form</p>
-            <form onSubmit={handleSubmit}>
-                <div>
+            <form onSubmit={handleSubmit} className='cont-form'>
+                <div className='cont-form-item'>
                     <label>Nombre</label>
-                    <input type='text' name='name' value={state.name} onChange={handleChange} placeholder='Nombre'/>
-                    <span>{errors.name}</span>
+                    <div className='cont-form-info'>
+                        <input type='text' name='name' value={state.name} onChange={handleChange} placeholder='Nombre'/>
+                        <span>{errors.name}</span>
+                    </div>
                 </div>
-                <div>
+                <div className='cont-form-item'>
                     <label>Apellido</label>
-                    <input type='text' name='surname' value={state.surname} onChange={handleChange} placeholder='Apellido'/>
-                    <span>{errors.surname}</span>
+                    <div className='cont-form-info'>
+                        <input type='text' name='surname' value={state.surname} onChange={handleChange} placeholder='Apellido'/>
+                        <span>{errors.surname}</span>
+                    </div>
                 </div>
-                <div>
+                <div className='cont-form-item'>
                     <label>Nacionalidad</label>
-                    <input type='text' name='nationality' value={state.nationality} onChange={handleChange} placeholder='Nacionalidad'/>
-                    <span>{errors.nationality}</span>
+                    <div className='cont-form-info'>
+                        <input type='text' name='nationality' value={state.nationality} onChange={handleChange} placeholder='Nacionalidad'/>
+                        <span>{errors.nationality}</span>
+                    </div>
                 </div>
-                <div>
+                <div className='cont-form-item'>
                     <label>Imagen</label>
-                    <input type='text' name='image' value={state.image} onChange={handleChange} placeholder='URL de la img'/>
-                    <span>{errors.image}</span>
+                    <div className='cont-form-info'>
+                        <input type='text' name='image' value={state.image} onChange={handleChange} placeholder='URL de la img'/>
+                        <span>{errors.image}</span>
+                    </div>
                 </div>
-                <div>
+                <div className='cont-form-item'>
                     <label>Descripción</label>
-                    <input type='text' name='description' value={state.description} onChange={handleChange} placeholder='Descripcion'/>
-                    <span>{errors.description}</span>
+                    <div className='cont-form-info'>
+                        <input type='text' name='description' value={state.description} onChange={handleChange} placeholder='Descripcion'/>
+                        <span>{errors.description}</span>
+                    </div>
                 </div>
-                <div>
-                    <label>Fecha de Nacimiento </label>
-                    <label >ejem: YEAR-MONT-DAY</label>
-                    <input type='text' name='birthdate' value={state.birthdate} onChange={handleChange} placeholder='Fecha de nacimiento'/>
-                    <span>{errors.birthdate}</span>
+                <div className='cont-form-item'>
+                    <label>Fecha de Nacimiento YY-MM-DD </label>
+                    <div className='cont-form-info'>
+                        <input type='text' name='birthdate' value={state.birthdate} onChange={handleChange} placeholder='Fecha de nacimiento'/>
+                        <span>{errors.birthdate}</span>
+                    </div>
                 </div>
-                <div>
+                <div className='cont-teams'>
                     <label>Teams:</label>
-                    <input
-                        type="text"
-                        name='teamsFilter'
-                        onChange={handleChange}
-                        value={state.teamsFilter || ''}
-                        placeholder="Buscar equipo"
-                    />
-                    <select  name="teams" id="" onChange={handleChange}>
-                        {filteredEquipos.map((p) => (
-                            <option key={p} value={p}>
-                                {p}
-                            </option>
-                        ))}
-                        
-                    </select>
-                    <span>{errors.teams}</span>
-                    
+                    <div className='cont-teams-info'>
+                        <input
+                            type="text"
+                            name='teamsFilter'
+                            onChange={handleChange}
+                            value={state.teamsFilter || ''}
+                            placeholder="Buscar equipo"
+                        />
+                        <select  name="teams" id="" onChange={handleChange}>
+                            {filteredEquipos.map((p) => (
+                                <option key={p} value={p}>
+                                    {p}
+                                </option>
+                            ))}
+                            
+                        </select>
+                        <span>{errors.teams}</span>
+
+                    </div>
+                    <div className='cont-teas-selec'>
                         {
                         state.teams.map(p => (
                             <div key={p}>
-                                <span id={'teams'} key={p}>
-                                    {p}
-                                </span>{' '}
-                                <button type='button' name='teams' id={p} onClick={remove} >
+                                <button className='bton-borrar' type='button' name='teams' id={p} onClick={remove} >
                                     x
                                 </button>
+                                <span className='team-item' id={'teams'} key={p}>
+                                    {p}
+                                </span>{' '}
                             </div>
                         ))
                         }
-                    
+                    </div>
                 </div>
-                
-                {/* {errors.cantidadErrores ? null : <button type='submit'>Enviar</button>} */}
-                <input disabled={botonSend()} type='submit' />
+                <div className='cont-boton'>
+                    <input className='cont-for-button' disabled={botonSend()} type='submit' />
+                </div>
             </form>
         </div>
     );

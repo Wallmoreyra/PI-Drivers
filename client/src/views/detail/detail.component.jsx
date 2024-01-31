@@ -30,20 +30,18 @@ function Detail() {
                 <Navbar/>
             </div>
             <div className='detail-container'>
-            
-            <div className='detail-image'>
-                <img src={driver.image} alt={`${driver.name} ${driver.surname}`}></img>
-            </div>
-            <div className='detail-info'>
-                <h2 className='detail-title'>Nombre: {driver.name}</h2>
-                <h3 className='detail-title'>Apellido: {driver.surname}</h3>
-                <h4 className='detail-subtitle'>ID: {driver.id}</h4>
-                <p className='detail-text'>Nacionalidad: {driver.nationality}</p>
-                <p className='detail-text'>Descripcion: {driver.description}</p>
-                <p className='detail-text'>Fecha de Nacimiento: {driver.birthdate}</p>
-                <p className='detail-text'>Escuderias: {`${driverTeams}.`}</p>
-            </div>
-            
+                <div className='detail-image'>
+                    <img src={driver.image} alt={`${driver.name} ${driver.surname}`}></img>
+                </div>
+                <div className='detail-info'>
+                    <h3 className='detail-title'>Nombre: {driver.name}</h3>
+                    <h5 className='detail-title'>Apellido: {driver.surname}</h5>
+                    <h5 className='detail-subtitle'>ID: {driver.id}</h5>
+                    <p className='detail-text'>Nacionalidad: {driver.nationality}</p>
+                    <p className='detail-text'>Descripcion: {driver.description}</p>
+                    <p className='detail-text'>Fecha de Nacimiento: {driver.birthdate}</p>
+                    <p className='detail-text'>Escuderias: {`${driverTeams}.`}</p>
+                </div>
             </div>
         </>
         

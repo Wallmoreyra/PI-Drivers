@@ -1,29 +1,58 @@
 .detail-container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 2fr 1fr;
     grid-gap: 16px;
-    align-items: center;
   }
   
   .detail-image {
-    grid-column: span 5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 90vh;
+  }
+  .detail-image img{
+    width: 70%;
+    height: 95%;
+    object-fit: cover;
+    margin-top: 2vh;
+    margin-left: 3vh;
+    border-radius: 30px;
   }
   
   .detail-info {
-    grid-column: span 7;
+    background-image: url('../../../public/fondo-detail.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80vh;
+    margin-right: 11%;
+    margin-top: 2vh;
+    border-radius: 5%;
+    color: red;
   }
   
   .detail-title {
+    margin-left: 3vh;
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+    background-color: rgba(2, 3, 3, .9);
+    margin-right: 4%;
   }
   
   .detail-subtitle {
+    margin-left: 3vh;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+    background-color: rgba(2, 3, 3, .9);
+    margin-right: 4%;
   }
   
   .detail-text {
+    margin-left: 3vh;
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+    background-color: rgba(2, 3, 3, .9);
+    margin-right: 4%;
   }

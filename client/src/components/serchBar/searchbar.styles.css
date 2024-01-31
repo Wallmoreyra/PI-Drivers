@@ -2,8 +2,26 @@
     -webkit-appearance: none;
     border: none;
     outline: none;
-    padding: 10px;
-    width: 150px;
+    width: 95%;
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.search-box-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.search-box-item-boton{
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: aliceblue;
+
+}
+.search-box-item-boton:hover {
+    color: white;
+    background-color: black;
 }

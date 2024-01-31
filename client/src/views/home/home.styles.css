@@ -24,6 +24,134 @@ body {
 }
 
 .container-cards{
-    width: 90%;
+    width: 95%;
    
+}
+.home-cont-opciones{
+    text-align: center;
+    display: grid;
+    width: 80%;
+    height: 10vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 1rem;
+}
+.home-cont-barras-busqueda{
+    display: flex;
+    flex-direction: column;
+}
+.home-cont-barras-busqueda p{
+    background-color: black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.home-cont-barras-busq-team{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 0;
+}
+.home-cont-barras-busq-team-botton{
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: aliceblue;
+}
+.home-cont-barras-busq-team-botton:hover{
+    color: white;
+    background-color: black;
+}
+.home-cont-pag-reset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.home-cont-pag-boton-reset{
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 35%;
+    height: 3vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: red;
+    background-color: antiquewhite;
+}
+.home-cont-pag{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin-top: 2px;
+}
+.home-cont-pag-boton{
+    height: 2.7vh;
+    width: 15vh;
+    margin-left: 1.5vh;
+    border-radius: 10px;
+    color: #242424;
+    background-color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.home-cont-filtros{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.home-cont-filtros-alfa{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+}
+.home-cont-filtros-alfa button{
+    width: 12vh;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: aliceblue;
+}
+.home-cont-filtros-alfa button:hover{
+    color: white;
+    background-color: black;
+}
+.home-cont-filtros-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+}
+.home-cont-filtros-info button{
+    width: 12vh;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: aliceblue;
+}
+.home-cont-filtros-info button:hover{
+    color: white;
+    background-color: black;
+}
+.home-cont-filtros-fecha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+}
+.home-cont-filtros-fecha button{
+    width: 12vh;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: aliceblue;
+}
+.home-cont-filtros-fecha button:hover{
+    color: white;
+    background-color: black;
 }

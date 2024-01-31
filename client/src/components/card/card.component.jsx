@@ -3,7 +3,7 @@ import './card.styles.css'
 
 function Card({driver}) {
     //console.log(driver)
-    const {id, name, surname, birthdate, teams} = driver
+    const {id, name,image,  surname, birthdate, teams} = driver
 
     let equipos = teams || [];
     //console.log(driver.teams ? driver.teams.length : 0)
@@ -12,11 +12,18 @@ function Card({driver}) {
     return (
         <div className='card-container'>
             <Link className='card-container-link' to={`/home/${id}`}>
-                <h3>{name} {surname}</h3>
-                <p>Imagen</p>
-                <p>DoB: {birthdate}</p>
-                {/* <p>Escuderias: {team}</p> */}
-                <span>{equipos}</span>
+                <div className='cont-img-name'>
+                    <div>
+                        <img className='card-cont-img' src={image} alt={`img de: ${name}${surname}`} />
+                    </div>
+                    <div className='card-cont-name-surname'>
+                        <h3>{name} {surname}</h3>
+                        <p>DoB: {birthdate}</p>
+                    </div>
+                </div>
+                <div className='card-cont-teams'>
+                    <span>{equipos}</span>
+                </div>    
             </Link>
         </div>
     );

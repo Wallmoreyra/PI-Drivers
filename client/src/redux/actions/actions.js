@@ -12,9 +12,9 @@ export function getTeams(){
     return async function (dispatch) {
         try {
             //ruta local host!!!!
-            //const response = await axios('http://localhost:3001/teams');
+            const response = await axios('http://localhost:3001/teams');
             //ruta IP host!!!!
-            const response = await axios.get('http://192.168.0.102:3001/teams');
+            //const response = await axios.get('http://192.168.0.102:3001/teams');
             return dispatch({
                 type:'GET_TEAMS',
                 payload:response.data
@@ -29,9 +29,9 @@ export function getDrivers(){
     return async function (dispatch) {
         try {
             //ruta local host!!!!
-            //const response = await axios('http://localhost:3001/drivers');
+            const response = await axios('http://localhost:3001/drivers');
             //ruta IP host!!!!
-            const response = await axios.get('http://192.168.0.102:3001/drivers');
+            //const response = await axios.get('http://192.168.0.102:3001/drivers');
             return dispatch({
                 type:'GET_DRIVERS',
                 payload:response.data
@@ -47,9 +47,9 @@ export function getByName(name){
     return async function (dispatch) {
         try {
             //ruta local host!!!!
-            //const response = await axios(`http://localhost:3001/drivers/name?name=${name}`);
+            const response = await axios(`http://localhost:3001/drivers/name?name=${name}`);
             //ruta IP host!!!!
-            const response = await axios.get(`http://192.168.0.102:3001/drivers/name?name=${name}`);
+            //const response = await axios.get(`http://192.168.0.102:3001/drivers/name?name=${name}`);
             return dispatch({
                 type:'GET_BY_NAME',
                 payload:response.data
@@ -64,9 +64,9 @@ export function getById(id){
     return async function (dispatch) {
         try {
             //ruta local host!!!!
-            //const response = await axios(`http://localhost:3001/drivers/idDriver/${id}`);
+            const response = await axios(`http://localhost:3001/drivers/idDriver/${id}`);
             //ruta IP host!!!!
-            const response = await axios.get(`http://192.168.0.102:3001/drivers/idDriver/${id}`);
+            //const response = await axios.get(`http://192.168.0.102:3001/drivers/idDriver/${id}`);
             return dispatch({
                 type: 'GET_BY_ID',
                 payload:response.data
@@ -81,9 +81,9 @@ export function postDriver(state){
     return async function(dispatch) {
         try{
             //ruta local host!!!!
-            //const response = await axios.post('http://localhost:3001/drivers');
+            const response = await axios.post('http://localhost:3001/drivers', state);
             //ruta IP host!!!!
-            await axios.post('http://192.168.0.102:3001/drivers', state);
+            //await axios.post('http://192.168.0.102:3001/drivers', state);
             alert('Driver creado con exito.')
 
         } catch (error) {
